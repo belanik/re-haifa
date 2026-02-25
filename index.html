@@ -8,20 +8,46 @@
   <link rel="icon" href="green.jpg" />
   <meta name="description" content="RE Haifa Hub — проекты устойчивого развития, обмена ресурсами и экологии в Хайфе.">
   <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .top-nav {
+      background: rgba(67,160,71,0.95);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 8px 16px;
+      z-index: 100;
+      position: relative;
+    }
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 7px 13px;
+      border-radius: 6px;
+      font-size: 0.92em;
+      font-weight: 700;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      transition: background 0.2s;
+    }
+    .top-nav a:hover {
+      background: rgba(255,255,255,0.2);
+      opacity: 1;
+    }
+    @media (max-width:600px) {
+      .top-nav { flex-direction: column; gap: 2px; padding: 6px 10px; }
+      .top-nav a { font-size: 1em; padding: 8px 10px; }
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <div style="width:48px;"></div><!-- пустой "держатель", чтобы центрирование бренда было ровным -->
+      <div style="width:48px;"></div>
       <div class="brand">Re-Haifa Hub</div>
 
       <div class="header-actions">
         <div class="action-pill" aria-label="Кнопки и язык">
-          <!-- ВАЖНО: сюда поставь свой реальный линк на вступление -->
           <a class="hdr-btn" href="https://belanik.github.io/RE-Haifa-Hub/anketa-ru.html" title="Поставь сюда ссылку на форму/контакт">Присоединиться</a>
-
-          <!-- ВАЖНО: сюда поставь свой реальный линк на Facebook -->
           <a class="hdr-btn" href="https://www.facebook.com/profile.php?id=61575821814765" title="Поставь сюда ссылку на страницу Facebook">Facebook</a>
 
           <a class="lang-btn active" href="index.html" aria-label="Русский">RU</a>
@@ -31,7 +57,17 @@
       </div>
     </div>
   </header>
-  <div id="menu-slot"></div>
+
+  <nav class="top-nav" aria-label="Навигация">
+    <a href="index.html">Главная</a>
+    <a href="foodwasteprogramRU.html" style="color:#ffd200;">NEW! FOOD WASTE PROGRAM</a>
+    <a href="ecoanalytics_RU/index.html">Эко-аналитика</a>
+    <a href="eco-law-ru.html">Эко законы Израиля</a>
+    <a href="programma.html">Циркулярная экономика</a>
+    <a href="textbookWM.html">Школа управления отходами</a>
+    <a href="oecd_reports/oecd_reports.html">Доклады ОЭСР</a>
+    <a href="about_us.html">Наша команда</a>
+  </nav>
 
   <main>
 
@@ -44,6 +80,7 @@
 
       <p class="news-item">
         <strong class="announcement-tag">26.12.2025 Новогодний экофестиваль</strong> Новогодний экофестиваль ReHaifa Hub в партнёрстве с матнасом Мартеф 23 и общиной Адар прошёл тепло и по-настоящему масштабно: нас посетило около 100 человек. За день мы провели 5 мастер-классов для взрослых и детей — делали джинсовые новогодние игрушки, создавали украшения из старых лампочек и превращали пакеты в яркие декоративные элементы и материалы для творчества — почти без дополнительных ресурсов, из того, что обычно считается "отходами". Также на фестивале прошел SWAP-PARTY, где посетители обменивались одеждой, аксессуарами, включая ёлочные игрушки и даже ёлку, прошла эко-викторина с подарками и финальный аукцион. Особая благодарность нашим партнёрам: Дмитрию Зотикову — за деревянные игрушки из переданных нами остатков столярного производства, и Юлии Ивантер — за мини-спектакль с куклами из старого текстиля. Спасибо Мартеф 23, Центру Социальной Справедливости и нашей команде волонтёров — вместе мы показали, что праздник можно сделать ярким ,без лишних покупок, через обмен, повторное использование и совместное творчество.
+      </p>
 
       <p class="news-item">
         <strong>04 декабря 2025 – четверг в 17.00!</strong> Первая встреча волонтёров экологического сообщества Re-Haifa - приглашаем всех, кто хочет присоединиться к экологическому сообществу Хайфы и помогать продвигать инициативы по сокращению отходов. На встрече мы познакомимся друг с другом в лёгком игровом формате , расскажем о планах сообщества — кратко о ближайших шагах и более дальних целях; обсудим, как каждый может присоединиться к волонтёрской команде. Будем рады видеть всех, кому важна экологичность города и уменьшение количества отходов!
@@ -146,16 +183,16 @@
     <section id="contacts">
       <h2>Контакты</h2>
       <div class="contacts">
-        <a href="mailto:rehaifa@gmail.com">rehaifahub@gmail.com</a>
-        <a href="https://t.me/rehaifa" target="_blank">Telegram</a>
+        <a href="mailto:rehaifahub@gmail.com">rehaifahub@gmail.com</a>
+        <a href="https://t.me/rehaifahub" target="_blank">Telegram</a>
         <a class="facebook-link" href="https://www.facebook.com/profile.php?id=61575821814765" target="_blank" rel="noopener">Мы на Facebook</a>
       </div>
     </section>
   </main>
+
   <footer>
     &copy; RE Haifa Hub, 2025 &mdash; Экология, обмен и сообщество в Хайфе
   </footer>
-  <script src="assets/script_menu_ru.js" defer></script>
 
 </body>
 </html>
